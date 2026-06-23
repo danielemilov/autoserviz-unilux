@@ -1,0 +1,4 @@
+import { Link } from "react-router-dom";
+import "./LegalPage.css";
+
+export default function ImprintPage() { return <main className="legal-page"><section className="page-width legal-content"><Link className="legal-back" to="/">← Към началото</Link><p className="legal-label">Фирмени данни</p><h1>Информация за фирмата.</h1><p className="legal-intro legal-warning">Преди публикуване собственикът трябва да замени означените данни с точните фирмени данни: юридическо име, ЕИК, адрес, представляващ и регистрационни данни, когато са приложими.</p><section><h2>Автосервиз Унилукс</h2><p>Адрес: с. Ушинци, ул. „Родопи“ 7<br />Телефон: 0885 224 935<br />Имейл: <a href="mailto:repairshopunilux@abv.bg">repairshopunilux@abv.bg</a></p></section><section><h2>Данни за допълване</h2><p>Юридическо име: [за попълване]<br />ЕИК / Булстат: [за попълване]<br />Представляващ: [за попълване]</p></section></section></main>; }

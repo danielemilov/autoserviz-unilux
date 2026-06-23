@@ -1,0 +1,564 @@
+/* =========================================================
+   MAP SECTION
+   ========================================================= */
+
+.map-section {
+  padding: 96px 0;
+
+  background: var(--paper);
+}
+
+/* =========================================================
+   MAP CARD
+   ========================================================= */
+
+.map-card {
+  display: grid;
+
+  grid-template-columns:
+    0.87fr
+    1.13fr;
+
+  min-height: 440px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  border-radius: 18px;
+
+  background: #111111;
+
+  box-shadow:
+    0 23px 55px
+    rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.map-info {
+  position: relative;
+  z-index: 1;
+
+  padding: 47px;
+
+  overflow: hidden;
+
+  background: #151515;
+}
+
+.map-info > * {
+  position: relative;
+  z-index: 1;
+}
+
+.map-info h2 {
+  max-width: 360px;
+
+  font-size:
+    clamp(
+      2.85rem,
+      4.5vw,
+      4.7rem
+    );
+}
+
+.map-info > p:not(.eyebrow) {
+  max-width: 280px;
+
+  margin:
+    26px
+    0
+    23px;
+
+  color: #b9b7b1;
+
+  font-size: 0.9rem;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   PHONE AND EMAIL
+   ========================================================= */
+
+.map-phone,
+.map-email {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.map-phone:hover,
+.map-email:hover {
+  color: #f14a44;
+}
+
+/* =========================================================
+   WORKING HOURS
+   ========================================================= */
+
+.map-hours {
+  display: block;
+
+  margin-top: 13px;
+
+  color: #aaa8a1;
+
+  font-size: 0.63rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DIRECTIONS BUTTON
+   ========================================================= */
+
+.map-route {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 24px;
+
+  padding:
+    13px
+    15px;
+
+  color: #ffffff;
+
+  background: var(--red);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.map-route:hover {
+  background: #ee312b;
+
+  box-shadow:
+    0 10px 18px -13px
+    rgba(226, 31, 38, 0.9);
+
+  transform: translateY(-2px);
+}
+
+.map-route span {
+  font-size: 0.9rem;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   UNILUX MARK
+   ========================================================= */
+
+.map-unilux-mark {
+  position: absolute;
+
+  right: 34px;
+  bottom: 29px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    8px
+    13px
+    8px
+    8px;
+
+  background:
+    linear-gradient(
+      128deg,
+      #ee3832,
+      #a81411
+    );
+
+  box-shadow:
+    9px 9px 0 #630c0a,
+    0 12px 20px
+    rgba(0, 0, 0, 0.28);
+
+  transform: skewX(-8deg);
+}
+
+.map-unilux-mark > * {
+  transform: skewX(8deg);
+}
+
+.map-unilux-mark div {
+  width: 39px;
+  height: 39px;
+
+  padding: 3px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #f5f4ef;
+}
+
+.map-unilux-mark img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.map-unilux-mark span {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+/* =========================================================
+   MAP CANVAS
+   ========================================================= */
+
+.map-canvas {
+  position: relative;
+
+  min-height: 320px;
+
+  overflow: hidden;
+
+  background: #dededb;
+}
+
+.map-canvas::after {
+  position: absolute;
+  z-index: 3;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 4px;
+
+  content: "";
+
+  pointer-events: none;
+
+  background: var(--red);
+}
+
+/* =========================================================
+   GOOGLE MAPS IFRAME
+   ========================================================= */
+
+.map-canvas iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  /*
+   * Запазва сегашната визуална стилистика.
+   * Ако искаш оригиналните цветове на Google Maps,
+   * премахни целия filter.
+   */
+  filter:
+    grayscale(0.82)
+    contrast(0.93);
+}
+
+/* =========================================================
+   CONSENT SCREEN
+   ========================================================= */
+
+.map-consent {
+  position: absolute;
+  z-index: 2;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 30px;
+
+  color: #22211e;
+
+  background:
+    linear-gradient(
+      135deg,
+      #deded8,
+      #c9c8c0
+    );
+
+  text-align: center;
+}
+
+.map-consent span {
+  color: var(--red);
+
+  font-size: 0.63rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.map-consent p {
+  max-width: 260px;
+
+  margin:
+    12px
+    0
+    17px;
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CONSENT BUTTON
+   ========================================================= */
+
+.map-consent button {
+  min-height: 40px;
+
+  padding:
+    0
+    14px;
+
+  color: #ffffff;
+
+  border: 0;
+
+  background: var(--ink);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.map-consent button:hover {
+  background: #2b2925;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   PRIVACY SETTINGS BUTTON
+   ========================================================= */
+
+.map-consent .map-consent-settings {
+  min-height: auto;
+
+  margin-top: 12px;
+
+  padding: 0;
+
+  color: #494743;
+
+  background: transparent;
+
+  font-size: 0.58rem;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  text-transform: none;
+}
+
+.map-consent .map-consent-settings:hover {
+  color: #1f1e1b;
+
+  background: transparent;
+
+  transform: none;
+}
+
+/* =========================================================
+   INVALID MAP CONFIGURATION
+   ========================================================= */
+
+.map-consent--error {
+  background:
+    linear-gradient(
+      135deg,
+      #e6e3dc,
+      #d1cec6
+    );
+}
+
+.map-consent-route {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0
+    14px;
+
+  color: #ffffff;
+
+  background: var(--ink);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.map-consent-route:hover {
+  background: #2b2925;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET AND MOBILE
+   ========================================================= */
+
+@media (max-width: 740px) {
+  .map-section {
+    padding: 70px 0;
+  }
+
+  .map-card {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    border-radius: 15px;
+  }
+
+  .map-info {
+    min-height: 360px;
+
+    padding: 32px;
+  }
+
+  .map-info h2 {
+    font-size: 3.3rem;
+  }
+
+  .map-unilux-mark {
+    right: 24px;
+    bottom: 22px;
+  }
+
+  .map-canvas {
+    min-height: 280px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .map-section {
+    padding: 58px 0;
+  }
+
+  .map-info {
+    min-height: 380px;
+
+    padding:
+      29px
+      25px;
+  }
+
+  .map-info h2 {
+    max-width: 290px;
+
+    font-size:
+      clamp(
+        2.65rem,
+        12vw,
+        3.2rem
+      );
+  }
+
+  .map-info > p:not(.eyebrow) {
+    margin-top: 22px;
+  }
+
+  .map-unilux-mark {
+    right: 20px;
+    bottom: 20px;
+
+    transform:
+      scale(0.92)
+      skewX(-8deg);
+
+    transform-origin:
+      right bottom;
+  }
+
+  .map-canvas {
+    min-height: 300px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .map-route,
+  .map-consent button,
+  .map-consent-route {
+    transition: none;
+  }
+}
