@@ -231,3 +231,72 @@
     font-size: .8rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .wizard-step {
+    min-height: 350px;
+  }
+
+  .step-kicker {
+    margin-bottom: 10px;
+    font-size: .56rem;
+    letter-spacing: .105em;
+  }
+
+  .wizard-step h2 {
+    font-size: clamp(2.2rem, 3.45vw, 3.55rem);
+  }
+
+  .step-copy {
+    max-width: 470px;
+    margin-top: 12px;
+    font-size: .78rem;
+    line-height: 1.55;
+  }
+
+  .step-heading {
+    gap: 24px;
+    margin-bottom: 23px;
+  }
+
+  .selection-count {
+    max-width: 245px;
+    padding: 8px 10px;
+    font-size: .56rem;
+  }
+
+  .service-choice-grid {
+    gap: 8px;
+  }
+
+  .service-choice-grid button {
+    min-height: 154px;
+    gap: 12px;
+    padding: 16px 10px 14px;
+  }
+
+  .service-choice-icon {
+    width: 66px;
+    height: 66px;
+    border-radius: 21px;
+  }
+
+  .service-choice-icon .service-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-choice-grid strong {
+    min-height: 34px;
+    font-size: .82rem;
+    line-height: 1.04;
+  }
+
+  .service-choice-grid b {
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    font-size: .72rem;
+  }
+}

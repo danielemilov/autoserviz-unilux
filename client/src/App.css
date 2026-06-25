@@ -4,3 +4,37 @@
 h1,h2,h3 { margin:0; font-family:Arial,Helvetica,sans-serif; font-weight:800; letter-spacing:-.065em; line-height:.92; } h1 { font-size:clamp(3.3rem,6.2vw,6.4rem); } h2 { font-size:clamp(2.5rem,4.5vw,4.7rem); } h3 { font-size:1.3rem; }
 .primary-link,.dark-link,.outline-link { min-height:50px; display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:0 19px; border:0; font-size:.69rem; font-weight:800; letter-spacing:.095em; text-transform:uppercase; transition:transform .16s,background .16s; }.primary-link { color:#fff; background:var(--red); }.primary-link:hover { background:var(--red-dark); transform:translateY(-2px); }.dark-link { color:#fff; background:var(--ink); }.dark-link:hover { background:#383833; transform:translateY(-2px); }.outline-link { color:var(--ink); border:1px solid var(--ink); background:transparent; }
 @media (max-width:680px) { :root { --page-width:min(100% - 32px,1180px); } h1 { font-size:clamp(3rem,15vw,4.5rem); } h2 { font-size:clamp(2.45rem,13vw,3.6rem); } }
+
+@media (min-width:1024px) {
+  :root {
+    --page-width:min(1240px, calc(100% - 58px));
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: .58rem;
+    letter-spacing: .115em;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 5.35vw, 5.55rem);
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 3.9vw, 4.05rem);
+  }
+
+  h3 {
+    font-size: 1.18rem;
+  }
+
+  .primary-link,
+  .dark-link,
+  .outline-link {
+    min-height: 46px;
+    gap: 15px;
+    padding: 0 17px;
+    font-size: .63rem;
+    letter-spacing: .085em;
+  }
+}

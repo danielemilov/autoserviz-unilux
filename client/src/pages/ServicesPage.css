@@ -183,3 +183,59 @@
     font-size: .8rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .services-intro {
+    padding: 66px 0 53px;
+  }
+
+  .services-intro p {
+    margin-bottom: 16px;
+    font-size: .58rem;
+    letter-spacing: .115em;
+  }
+
+  .services-intro h1 {
+    max-width: 550px;
+    font-size: clamp(2.75rem, 4vw, 4.15rem);
+  }
+
+  .services-intro span {
+    max-width: 430px;
+    margin-top: 22px;
+    font-size: .86rem;
+    line-height: 1.58;
+  }
+
+  .services-showcase {
+    padding: 38px 0 78px;
+  }
+
+  .services-grid {
+    gap: 9px;
+  }
+
+  .service-card {
+    min-height: 132px;
+    gap: 11px;
+    padding: 16px 10px 14px;
+  }
+
+  .service-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+  }
+
+  .service-card-icon .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-card h2 {
+    max-width: 150px;
+    min-height: 36px;
+    font-size: clamp(.78rem, .86vw, .94rem);
+    line-height: 1.04;
+  }
+}

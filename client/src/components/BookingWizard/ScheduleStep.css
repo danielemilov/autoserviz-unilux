@@ -375,3 +375,91 @@
     min-height: 47px;
   }
 }
+
+@media (min-width: 1024px) {
+  .schedule-heading {
+    margin-bottom: 18px;
+  }
+
+  .schedule-body {
+    grid-template-columns:
+      minmax(318px, 410px)
+      minmax(205px, 285px)
+      minmax(170px, 205px);
+    gap: 16px;
+  }
+
+  .selected-slot {
+    min-width: 170px;
+    padding: 12px 14px;
+    box-shadow: 6px 6px 0 var(--red);
+  }
+
+  .selected-slot span {
+    margin-bottom: 6px;
+    font-size: .49rem;
+  }
+
+  .selected-slot strong {
+    font-size: .73rem;
+  }
+
+  .selected-slot b {
+    font-size: .67rem;
+  }
+
+  .calendar-surface {
+    max-width: 410px;
+    padding: 0 12px 12px;
+    border-radius: 14px;
+  }
+
+  .calendar-toolbar {
+    grid-template-columns: 32px 1fr 32px;
+    min-height: 48px;
+    margin: 0 -12px 11px;
+    padding: 0 12px;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .calendar-toolbar strong {
+    font-size: .73rem;
+  }
+
+  .calendar-arrow {
+    width: 27px;
+    height: 27px;
+    font-size: .86rem;
+  }
+
+  .calendar-weekdays {
+    margin-bottom: 6px;
+    font-size: .48rem;
+  }
+
+  .calendar-days button {
+    font-size: .61rem;
+  }
+
+  .time-area {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .time-area > p {
+    margin-bottom: 11px;
+    font-size: .52rem;
+    letter-spacing: .085em;
+  }
+
+  .time-grid {
+    grid-template-columns: repeat(2, minmax(78px, 1fr));
+    gap: 7px;
+  }
+
+  .time-grid button {
+    min-height: 40px;
+    border-radius: 10px;
+    font-size: .68rem;
+  }
+}

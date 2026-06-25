@@ -559,3 +559,118 @@
     transform-origin: right center;
   }
 }
+
+@media (min-width: 1024px) {
+  .footer-inner {
+    padding-top: 48px;
+    padding-bottom: 19px;
+  }
+
+  .footer-main {
+    grid-template-columns:
+      minmax(235px, .82fr)
+      minmax(230px, .92fr)
+      minmax(300px, 1.08fr);
+    gap: clamp(42px, 5vw, 82px);
+    padding-bottom: 38px;
+  }
+
+  .footer-brand {
+    gap: 16px;
+    padding-top: 2px;
+  }
+
+  .footer-brand img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .footer-brand strong {
+    font-size: 1.22rem;
+    letter-spacing: .055em;
+  }
+
+  .footer-brand small {
+    font-size: .55rem;
+    letter-spacing: .09em;
+  }
+
+  .footer-column h2 {
+    margin-bottom: 18px;
+    font-size: .56rem;
+    letter-spacing: .065em;
+  }
+
+  .footer-contact-list {
+    gap: 10px;
+  }
+
+  .footer-phone {
+    font-size: 1rem;
+  }
+
+  .footer-email,
+  .footer-address {
+    font-size: .72rem;
+    line-height: 1.48;
+  }
+
+  .footer-service-column {
+    gap: 25px;
+  }
+
+  .footer-hours-list {
+    gap: 13px;
+  }
+
+  .footer-hours-list > div {
+    gap: 22px;
+  }
+
+  .footer-hours-list span {
+    font-size: .72rem;
+  }
+
+  .footer-hours-list strong {
+    font-size: .74rem;
+  }
+
+  .footer-payment {
+    gap: 22px;
+    padding-top: 20px;
+  }
+
+  .footer-payment-label {
+    font-size: .55rem;
+    letter-spacing: .065em;
+  }
+
+  .footer-payment-value > strong {
+    font-size: .73rem;
+  }
+
+  .footer-payment-icons .payment-badges {
+    gap: 6px;
+    transform: scale(.86);
+    transform-origin: right center;
+  }
+
+  .footer-bottom {
+    gap: 24px;
+    padding-top: 18px;
+  }
+
+  .footer-bottom > p {
+    font-size: .58rem;
+  }
+
+  .footer-legal {
+    gap: 18px;
+  }
+
+  .footer-legal a,
+  .footer-legal button {
+    font-size: .5rem;
+    letter-spacing: .03em;
+  }
+}

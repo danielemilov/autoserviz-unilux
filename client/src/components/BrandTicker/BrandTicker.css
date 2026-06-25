@@ -623,6 +623,29 @@
     width: min(72vw, 650px);
   }
 }
+
+@media (min-width: 1024px) {
+  .brand-ticker {
+    --ticker-height: 34px;
+    --ticker-side-shadow-width: clamp(120px, 10vw, 170px);
+  }
+
+  .brand-ticker__logo-area {
+    width: 76px;
+    height: 27px;
+    transform: scale(.94);
+  }
+
+  .brand-ticker__item--volkswagen
+  .brand-ticker__logo-area {
+    width: 78px;
+    height: 28px;
+  }
+
+  .brand-ticker__logo-area::before {
+    width: 40px;
+  }
+}
 /* =========================================================
    MOBILE
    ========================================================= */

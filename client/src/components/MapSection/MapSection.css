@@ -562,3 +562,69 @@
     transition: none;
   }
 }
+
+@media (min-width: 1024px) {
+  .map-section {
+    padding: 78px 0;
+  }
+
+  .map-card {
+    grid-template-columns: .84fr 1.16fr;
+    min-height: 395px;
+    border-radius: 16px;
+  }
+
+  .map-info {
+    padding: 39px;
+  }
+
+  .map-info h2 {
+    max-width: 330px;
+    font-size: clamp(2.35rem, 3.8vw, 4rem);
+  }
+
+  .map-info > p:not(.eyebrow) {
+    max-width: 260px;
+    margin: 22px 0 19px;
+    font-size: .82rem;
+    line-height: 1.5;
+  }
+
+  .map-phone,
+  .map-email {
+    margin-top: 8px;
+    font-size: .69rem;
+  }
+
+  .map-hours {
+    margin-top: 11px;
+    font-size: .58rem;
+  }
+
+  .map-route {
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 14px;
+    font-size: .59rem;
+  }
+
+  .map-unilux-mark {
+    right: 28px;
+    bottom: 25px;
+    gap: 8px;
+    padding: 7px 12px 7px 7px;
+  }
+
+  .map-unilux-mark div {
+    width: 35px;
+    height: 35px;
+  }
+
+  .map-unilux-mark span {
+    font-size: .58rem;
+  }
+
+  .map-canvas {
+    min-height: 292px;
+  }
+}

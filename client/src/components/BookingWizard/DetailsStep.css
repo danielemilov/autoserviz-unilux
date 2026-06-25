@@ -125,3 +125,54 @@
     padding: 16px 15px;
   }
 }
+
+@media (min-width: 1024px) {
+  .details-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(235px, 305px);
+    gap: 18px;
+  }
+
+  .details-form {
+    max-width: 600px;
+    gap: 11px;
+  }
+
+  .details-form textarea {
+    min-height: 66px;
+    padding: 11px 12px;
+  }
+
+  .details-side {
+    gap: 12px;
+  }
+
+  .appointment-summary {
+    min-height: 124px;
+    padding: 17px 16px;
+    box-shadow: 7px 7px 0 rgba(212, 33, 29, .14);
+  }
+
+  .appointment-summary > span {
+    margin-bottom: 8px;
+    font-size: .52rem;
+    letter-spacing: .105em;
+  }
+
+  .appointment-summary strong {
+    font-size: 1.02rem;
+  }
+
+  .appointment-summary p {
+    margin-top: 8px;
+    font-size: .69rem;
+  }
+
+  .details-side .payment-notice {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .details-side .payment-notice h3 {
+    font-size: 1.18rem;
+  }
+}

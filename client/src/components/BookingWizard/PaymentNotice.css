@@ -1,1 +1,53 @@
 .payment-notice { display:grid; grid-template-columns:1fr auto; gap:23px; align-items:end; margin-top:24px; padding:22px; color:#fff; background:var(--ink); }.payment-notice .eyebrow { margin-bottom:8px; font-size:.56rem; }.payment-notice h3 { font-size:1.8rem; }.payment-notice p:not(.eyebrow) { max-width:285px; margin:9px 0 0; color:#aaa8a0; font-size:.69rem; line-height:1.5; }.payment-notice.compact { margin:0; padding:22px 0 0; border-top:1px solid #353535; background:transparent; }.payment-notice.compact h3 { font-size:1.32rem; letter-spacing:-.05em; }.payment-notice.compact p:not(.eyebrow) { max-width:360px; }.payment-badges { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:7px; max-width:190px; }.payment-badges > span { min-width:59px; min-height:32px; display:inline-flex; align-items:center; justify-content:center; padding:5px 7px; color:var(--ink); border-radius:2px; background:#fff; font-family:Arial,sans-serif; font-size:.72rem; font-weight:700; }.payment-badges .visa { color:#17316d; font-size:.88rem; font-style:italic; }.payment-badges .master { position:relative; min-width:49px; }.master i { position:absolute; width:18px; height:18px; border-radius:50%; background:#d91d16; }.master i:first-child{left:10px;}.master i:last-child{right:10px;background:#f5a91d;opacity:.88;}.payment-badges b{color:#4285f4;}@media(max-width:600px){.payment-notice{grid-template-columns:1fr;}.payment-badges{justify-content:flex-start;max-width:none;}.payment-notice.compact{padding-top:20px;}}
+
+@media (min-width:1024px) {
+  .payment-notice {
+    gap: 18px;
+    margin-top: 20px;
+    padding: 19px;
+  }
+
+  .payment-notice .eyebrow {
+    margin-bottom: 7px;
+    font-size: .51rem;
+  }
+
+  .payment-notice h3 {
+    font-size: 1.5rem;
+  }
+
+  .payment-notice p:not(.eyebrow) {
+    max-width: 260px;
+    margin-top: 8px;
+    font-size: .64rem;
+  }
+
+  .payment-notice.compact h3 {
+    font-size: 1.12rem;
+  }
+
+  .payment-badges {
+    gap: 6px;
+    max-width: 176px;
+  }
+
+  .payment-badges > span {
+    min-width: 54px;
+    min-height: 29px;
+    padding: 4px 6px;
+    font-size: .66rem;
+  }
+
+  .payment-badges .visa {
+    font-size: .8rem;
+  }
+
+  .payment-badges .master {
+    min-width: 45px;
+  }
+
+  .master i {
+    width: 16px;
+    height: 16px;
+  }
+}

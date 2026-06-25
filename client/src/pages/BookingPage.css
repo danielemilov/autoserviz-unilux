@@ -1,1 +1,11 @@
 .booking-page { min-height:calc(100vh - 180px); background:var(--paper); }.booking-page-content { padding:54px 0 106px; }@media(max-width:740px){.booking-page-content{padding:29px 0 70px;}}
+
+@media (min-width:1024px) {
+  .booking-page {
+    min-height: calc(100vh - 150px);
+  }
+
+  .booking-page-content {
+    padding: 42px 0 82px;
+  }
+}
