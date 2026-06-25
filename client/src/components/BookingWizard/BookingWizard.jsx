@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { site } from "../../config/site";
 import ServiceStep from "./ServiceStep";
 import VehicleStep from "./VehicleStep";
@@ -10,6 +10,8 @@ const initialState = { service: "", vehicle: { make: "", model: "", registration
 const labels = ["Услуга", "Автомобил", "Час", "Данни"];
 
 export default function BookingWizard() {
+  const wizardRef = useRef(null);
+  const firstStepRender = useRef(true);
   const preselected = useMemo(() => new URLSearchParams(window.location.search).get("service") || "", []);
   const [state, setState] = useState({ ...initialState, service: preselected });
   const [step, setStep] = useState(1);
@@ -21,6 +23,23 @@ export default function BookingWizard() {
   const changeVehicle = (key, value) => setState((current) => ({ ...current, vehicle: { ...current.vehicle, [key]: value } }));
   const changeCustomer = (key, value) => setState((current) => ({ ...current, customer: { ...current.customer, [key]: value } }));
   const isValid = () => step === 1 ? Boolean(state.service) : step === 2 ? Boolean(state.vehicle.make && state.vehicle.model) : step === 3 ? Boolean(state.date && state.time) : Boolean(state.customer.name && state.customer.phone && state.customer.email);
+
+  useEffect(() => {
+    if (firstStepRender.current) {
+      firstStepRender.current = false;
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height ?? 0;
+      const wizardTop = wizardRef.current?.getBoundingClientRect().top ?? 0;
+
+      window.scrollTo({
+        top: Math.max(0, window.scrollY + wizardTop - headerHeight - 14),
+        behavior: "smooth",
+      });
+    });
+  }, [step]);
 
   function next() {
     if (!isValid()) {
@@ -78,7 +97,7 @@ export default function BookingWizard() {
 
   if (completed) return <section className="wizard-success"><span>✓</span><p className="eyebrow">ЗАЯВКАТА Е ИЗПРАТЕНА</p><h2>Благодарим.</h2><p>Ще се свържем с теб, за да потвърдим посещението и точния час.</p></section>;
 
-  return <section className="wizard">
+  return <section className="wizard" ref={wizardRef}>
     <aside className="wizard-progress" aria-label="Напредък на заявката">{labels.map((label, index) => <button type="button" disabled={step < index + 1} onClick={() => setStep(index + 1)} className={step === index + 1 ? "active" : step > index + 1 ? "done" : ""} key={label}><span>{index + 1}</span>{label}</button>)}</aside>
     <div className="wizard-panel">
       {step === 1 && <ServiceStep value={state.service} onChange={(value) => change("service", value)} />}
