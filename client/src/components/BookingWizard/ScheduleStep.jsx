@@ -129,6 +129,7 @@ export default function ScheduleStep({
             Избери предпочитан ден и час. Потвърждаваме
             посещението лично.
           </p>
+          <br></br>
         </div>
       </div>
 

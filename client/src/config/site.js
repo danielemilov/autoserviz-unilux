@@ -31,8 +31,6 @@ export const site = {
    */
   web3FormsAccessKey:
     "43d92338-9575-4c18-9b4e-f06d1165ebbf",
-
-  web3FormsMode: "test",
 };
 
 export const services = [
