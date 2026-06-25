@@ -61,7 +61,7 @@
   color: var(--ink);
   border: 1px solid var(--line);
   background:
-    radial-gradient(circle at 50% 16%, rgba(222, 222, 222, 0.395), transparent 38%),
+    radial-gradient(circle at 50% 16%, rgba(212, 33, 29, .07), transparent 38%),
     #fff;
   text-align: center;
   transition:
