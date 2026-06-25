@@ -1,269 +1,561 @@
 .footer {
-  color: #fff;
+  --footer-white: #f8f7f4;
+  --footer-secondary: #bbb8b1;
+  --footer-label: #8c8982;
+  --footer-muted: #77746e;
+  --footer-line: #2b2a27;
+
+  color: var(--footer-white);
   background: #11110f;
 }
 
 .footer-inner {
-  padding: 38px 0 22px;
+  padding-top: 62px;
+  padding-bottom: 22px;
 }
 
-.footer-layout {
+/* =========================================================
+   ОСНОВНИ ТРИ КОЛОНИ
+   ========================================================= */
+
+.footer-main {
   display: grid;
-  grid-template-columns: minmax(260px, .84fr) minmax(0, 1.16fr);
-  gap: 30px;
-  align-items: stretch;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #2a2926;
+  grid-template-columns:
+    minmax(270px, 0.9fr)
+    minmax(250px, 0.95fr)
+    minmax(330px, 1.15fr);
+  gap: clamp(54px, 7vw, 112px);
+  align-items: start;
+  padding-bottom: 49px;
 }
 
-.footer-brand-sector {
-  display: grid;
-  align-content: start;
-  gap: 18px;
+/* =========================================================
+   ЛОГО
+   ========================================================= */
+
+.footer-brand-column {
+  display: flex;
+  align-items: flex-start;
 }
 
 .footer-brand {
+  width: fit-content;
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
-  gap: 13px;
-  width: max-content;
-  max-width: 100%;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 850;
-  letter-spacing: .13em;
+  gap: 22px;
+  color: var(--footer-white);
 }
 
 .footer-brand img {
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, .18);
+  flex: 0 0 auto;
+  width: 94px;
+  height: 94px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 10px 18px rgba(0, 0, 0, .34);
 }
 
-.footer-brand span {
+.footer-brand > span {
+  min-width: 0;
   display: grid;
-  gap: 3px;
-}
-
-.footer-brand small {
-  color: #a9a7a0;
-  font-size: .53rem;
-  letter-spacing: .18em;
-}
-
-.footer-brand-sector p {
-  max-width: 350px;
-  margin: 0;
-  color: #b8b6af;
-  font-size: .78rem;
-  font-weight: 620;
-  line-height: 1.58;
-  letter-spacing: .01em;
-}
-
-.footer-info-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px 22px;
-  align-items: start;
-  padding: 20px;
-  border: 1px solid #2c2b28;
-  background: #151513;
-}
-
-.footer-sector {
-  display: grid;
-  align-content: start;
   gap: 7px;
 }
 
-.footer-sector-main {
-  grid-column: 1 / -1;
-  padding: 0 0 17px;
-  border-right: 0;
-  border-bottom: 1px solid #2f2e2b;
+.footer-brand strong {
+  color: var(--footer-white);
+  font-size: 1.42rem;
+  font-weight: 850;
+  letter-spacing: 0.065em;
+  line-height: 1;
 }
 
-.footer-sector > span {
-  margin-bottom: 4px;
-  color: #77756f;
-  font-size: .58rem;
-  font-weight: 850;
-  letter-spacing: .1em;
+.footer-brand small {
+  color: #9b9891;
+  font-size: 0.63rem;
+  font-weight: 740;
+  letter-spacing: 0.105em;
+  line-height: 1;
+}
+
+/* =========================================================
+   ОБЩА ЙЕРАРХИЯ
+   ========================================================= */
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h2 {
+  margin: 0 0 23px;
+  color: var(--footer-label);
+  font-size: 0.61rem;
+  font-weight: 790;
+  letter-spacing: 0.075em;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
-.footer-sector p {
-  margin: 0;
-  color: #b8b6af;
-  font-size: .74rem;
-  font-weight: 620;
-  line-height: 1.5;
-  letter-spacing: .005em;
+/* =========================================================
+   КОНТАКТ
+   ========================================================= */
+
+.footer-contact-list {
+  display: grid;
+  justify-items: start;
+  gap: 13px;
 }
 
-.footer-sector a {
+.footer-contact-list a {
   width: fit-content;
-  color: #f2f0eb;
-  font-size: .75rem;
-  font-weight: 760;
-  line-height: 1.45;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  transition:
+    color 0.18s ease,
+    opacity 0.18s ease;
 }
 
-.footer-sector a:not(.footer-primary-link) {
-  color: #b8b6af;
+.footer-phone {
+  color: var(--footer-white);
+  font-size: 1.11rem;
+  font-weight: 810;
+  letter-spacing: 0.012em;
+  line-height: 1.3;
 }
 
-.footer-sector a:hover {
-  color: #fff;
+.footer-email {
+  color: var(--footer-secondary);
+  font-size: 0.79rem;
+  font-weight: 570;
+  letter-spacing: 0.008em;
+  line-height: 1.55;
 }
 
-.footer-primary-link {
-  color: #fff !important;
-  font-size: 1rem !important;
-  letter-spacing: .02em;
+.footer-address {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+  color: var(--footer-secondary);
+  font-size: 0.77rem;
+  font-weight: 570;
+  letter-spacing: 0.008em;
+  line-height: 1.55;
 }
 
-.footer .payment-notice.compact {
-  margin-top: 24px;
-  padding: 22px 0 24px;
-  border-top: 0;
-  border-bottom: 1px solid #2a2926;
+.footer-address i {
+  flex: 0 0 auto;
+  color: #817e77;
+  font-style: normal;
+  font-size: 0.73rem;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
 }
 
-.footer .payment-notice.compact h3 {
-  font-size: 1.18rem;
+.footer-contact-list a:hover {
+  color: var(--footer-white);
 }
+
+.footer-address:hover i {
+  color: var(--footer-white);
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   РАБОТНО ВРЕМЕ
+   ========================================================= */
+
+.footer-service-column {
+  display: grid;
+  gap: 31px;
+}
+
+.footer-hours-list {
+  display: grid;
+  gap: 17px;
+}
+
+.footer-hours-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 28px;
+}
+
+.footer-hours-list span {
+  color: var(--footer-secondary);
+  font-size: 0.77rem;
+  font-weight: 570;
+  letter-spacing: 0.008em;
+  line-height: 1.5;
+}
+
+.footer-hours-list strong {
+  color: var(--footer-white);
+  font-size: 0.8rem;
+  font-weight: 790;
+  letter-spacing: 0.012em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ПЛАЩАНЕ
+   ========================================================= */
+
+.footer-payment {
+  display: grid;
+  grid-template-columns: minmax(85px, auto) minmax(0, 1fr);
+  align-items: start;
+  gap: 26px;
+  padding-top: 25px;
+  border-top: 1px solid var(--footer-line);
+}
+
+.footer-payment-label {
+  padding-top: 3px;
+  color: var(--footer-label);
+  font-size: 0.6rem;
+  font-weight: 790;
+  letter-spacing: 0.075em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.footer-payment-value {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+
+.footer-payment-value > strong {
+  color: var(--footer-white);
+  font-size: 0.8rem;
+  font-weight: 790;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* =========================================================
+   PAYMENT NOTICE — ПОКАЗВАМЕ САМО ИКОНКИТЕ
+   ========================================================= */
+
+.footer-payment-icons {
+  width: 100%;
+}
+
+.footer-payment-icons .payment-notice.compact {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+/*
+  Скрива текстовата част на PaymentNotice.
+  Остават само съществуващите payment badges.
+*/
+.footer-payment-icons
+  .payment-notice.compact
+  > *:not(.payment-badges) {
+  display: none;
+}
+
+.footer-payment-icons .payment-notice.compact::before,
+.footer-payment-icons .payment-notice.compact::after {
+  display: none;
+}
+
+.footer-payment-icons .payment-notice.compact h3,
+.footer-payment-icons .payment-notice.compact p {
+  display: none;
+}
+
+.footer-payment-icons .payment-badges {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.footer-payment-icons .payment-badges > * {
+  margin: 0;
+}
+
+/* =========================================================
+   ДОЛНА ЛЕНТА
+   ========================================================= */
 
 .footer-bottom {
-  display: grid;
-  gap: 14px;
-  justify-items: center;
-  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 21px;
+  border-top: 1px solid var(--footer-line);
+}
+
+.footer-bottom > p {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 0.62rem;
+  font-weight: 610;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
 }
 
 .footer-legal {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 22px;
 }
 
 .footer-legal a,
 .footer-legal button {
   padding: 0;
-  color: #85837d;
+  color: var(--footer-muted);
   border: 0;
   background: transparent;
-  font-size: .54rem;
-  font-weight: 740;
-  letter-spacing: .055em;
-  text-transform: uppercase;
-}
-
-.footer-legal button {
+  font: inherit;
+  font-size: 0.54rem;
+  font-weight: 670;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
   cursor: pointer;
+  transition: color 0.18s ease;
 }
 
 .footer-legal a:hover,
 .footer-legal button:hover {
-  color: #fff;
+  color: var(--footer-white);
 }
 
-.footer-copyright {
-  margin: 0;
-  color: #aaa8a1;
-  font-size: .66rem;
-  font-weight: 740;
-  letter-spacing: .045em;
-  text-align: center;
+/* =========================================================
+   ДОСТЪПНОСТ
+   ========================================================= */
+
+.footer a:focus-visible,
+.footer button:focus-visible {
+  outline: 2px solid var(--footer-white);
+  outline-offset: 5px;
 }
+
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 960px) {
-  .footer-layout {
-    grid-template-columns: 1fr;
-    gap: 22px;
+  .footer-inner {
+    padding-top: 50px;
   }
 
-  .footer-info-panel {
+  .footer-main {
     grid-template-columns: 1fr 1fr;
+    gap: 43px 56px;
   }
 
-  .footer-sector-main {
+  .footer-brand-column {
     grid-column: 1 / -1;
-    padding: 0 0 18px;
-    border-right: 0;
-    border-bottom: 1px solid #2f2e2b;
+    padding-bottom: 4px;
+  }
+
+  .footer-brand img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .footer-brand strong {
+    font-size: 1.32rem;
   }
 }
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 640px) {
   .footer-inner {
-    padding: 30px 0 20px;
+    padding-top: 39px;
+    padding-bottom: 18px;
   }
 
-  .footer-layout {
-    gap: 20px;
-    padding-bottom: 21px;
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-bottom: 30px;
   }
 
-  .footer-brand-sector {
+  .footer-brand-column {
+    padding-bottom: 31px;
+    border-bottom: 1px solid var(--footer-line);
+  }
+
+  .footer-brand {
+    gap: 17px;
+  }
+
+  .footer-brand img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .footer-brand strong {
+    font-size: 1.18rem;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-brand small {
+    font-size: 0.57rem;
+    letter-spacing: 0.095em;
+  }
+
+  .footer-contact-column {
+    padding: 29px 0;
+    border-bottom: 1px solid var(--footer-line);
+  }
+
+  .footer-service-column {
+    gap: 26px;
+    padding-top: 29px;
+  }
+
+  .footer-column h2 {
+    margin-bottom: 18px;
+    color: #918e87;
+  }
+
+  .footer-phone {
+    font-size: 1.04rem;
+  }
+
+  .footer-email,
+  .footer-address {
+    color: #bbb8b1;
+    font-size: 0.75rem;
+  }
+
+  .footer-hours-list {
     gap: 15px;
   }
 
-  .footer-brand-sector p {
-    font-size: .76rem;
-    line-height: 1.55;
-  }
-
-  .footer-info-panel {
-    grid-template-columns: 1fr;
+  .footer-hours-list > div {
     gap: 16px;
-    padding: 0;
-    border: 0;
-    background: transparent;
   }
 
-  .footer-sector,
-  .footer-sector-main {
-    padding: 0 0 16px;
-    border-right: 0;
-    border-bottom: 1px solid #2d2c29;
+  .footer-hours-list span {
+    color: #bbb8b1;
+    font-size: 0.74rem;
   }
 
-  .footer-sector:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
+  .footer-hours-list strong {
+    font-size: 0.77rem;
   }
 
-  .footer-sector > span {
-    letter-spacing: .08em;
+  .footer-payment {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 20px;
+    padding-top: 23px;
   }
 
-  .footer-sector p,
-  .footer-sector a {
-    font-size: .74rem;
+  .footer-payment-value {
+    gap: 11px;
   }
 
-  .footer .payment-notice.compact {
-    padding: 20px 0 22px;
+  .footer-payment-value > strong {
+    font-size: 0.76rem;
+  }
+
+  .footer-payment-icons .payment-badges {
+    gap: 7px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 19px;
   }
 
   .footer-legal {
-    gap: 13px;
+    justify-content: flex-start;
+    gap: 17px;
+  }
+
+  .footer-bottom > p {
+    font-size: 0.6rem;
   }
 
   .footer-legal a,
   .footer-legal button {
-    font-size: .52rem;
-    letter-spacing: .04em;
+    font-size: 0.52rem;
+  }
+}
+
+/* =========================================================
+   МНОГО МАЛКИ ЕКРАНИ
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .footer-hours-list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
-  .footer-copyright {
-    font-size: .62rem;
-    letter-spacing: .035em;
+  .footer-hours-list strong {
+    white-space: normal;
+  }
+
+  .footer-payment {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .footer-payment-value {
+    justify-items: start;
+  }
+
+  .footer-payment-value > strong {
+    text-align: left;
+  }
+
+  .footer-payment-icons .payment-badges {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 961px) {
+  .footer-brand {
+    gap: 17px;
+    padding-top: 4px;
+  }
+
+  .footer-brand img {
+    width: 86px;
+    height: 86px;
+  }
+
+  .footer-brand strong {
+    font-size: 1.52rem;
+    letter-spacing: 0.055em;
+  }
+
+  .footer-brand small {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-payment-icons .payment-badges {
+    gap: 7px;
+    transform: scale(0.92);
+    transform-origin: right center;
   }
 }
