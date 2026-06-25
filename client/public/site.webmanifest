@@ -1,0 +1,31 @@
+{
+  "name": "Автосервиз UNILUX",
+  "short_name": "UNILUX",
+  "description": "Автосервиз UNILUX в с. Ушинци до Разград — ремонт, диагностика и грижа за автомобили.",
+  "lang": "bg-BG",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#111111",
+  "theme_color": "#c91e19",
+  "categories": [
+    "business",
+    "auto",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/unilux-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
