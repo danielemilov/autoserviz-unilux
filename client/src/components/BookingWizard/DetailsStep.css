@@ -1,1 +1,127 @@
-.details-form { display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:660px; }.details-form label { display:grid; gap:7px; }.details-form .full { grid-column:span 2; }.details-form textarea { min-height:72px; padding:12px; resize:vertical; }.appointment-summary { margin-top:18px; padding:13px 15px; border-left:3px solid var(--red); background:var(--soft); }.appointment-summary > span { display:block; margin-bottom:6px; color:var(--muted); font-size:.57rem; font-weight:800; letter-spacing:.1em; }.appointment-summary strong { font-family:Arial,Helvetica,sans-serif; font-size:1.2rem; letter-spacing:-.05em; text-transform:uppercase; }.appointment-summary p { margin:8px 0 0; color:#5d5a54; font-size:.75rem; }@media(max-width:600px){.details-form{grid-template-columns:1fr;gap:11px;}.details-form .full{grid-column:auto;}.details-form textarea{min-height:64px;}}
+.details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(255px, 330px);
+  gap: 22px;
+  align-items: start;
+}
+
+.details-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 660px;
+}
+
+.details-form label {
+  display: grid;
+  gap: 7px;
+}
+
+.details-form .full {
+  grid-column: span 2;
+}
+
+.details-form textarea {
+  min-height: 72px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.details-side {
+  display: grid;
+  gap: 14px;
+}
+
+.appointment-summary {
+  position: relative;
+  min-height: 142px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 18px;
+  color: var(--ink);
+  border: 1px solid #d9d6cd;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(212, 33, 29, .08), transparent 34%),
+    linear-gradient(145deg, #f6f5f1, #e7e4dc);
+  box-shadow: 8px 8px 0 rgba(212, 33, 29, .16);
+  overflow: hidden;
+}
+
+.appointment-summary::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  content: "";
+  background: var(--red);
+}
+
+.appointment-summary > span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--red);
+  font-size: .57rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+
+.appointment-summary strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.18rem;
+  letter-spacing: -.04em;
+  line-height: 1.06;
+  text-transform: uppercase;
+}
+
+.appointment-summary p {
+  margin: 10px 0 0;
+  color: #5f5b54;
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+.details-side .payment-notice {
+  grid-template-columns: 1fr;
+  gap: 17px;
+  margin-top: 0;
+  padding: 18px;
+}
+
+.details-side .payment-notice h3 {
+  font-size: 1.35rem;
+}
+
+.details-side .payment-badges {
+  justify-content: flex-start;
+  max-width: none;
+}
+
+@media (max-width: 780px) {
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .details-side {
+    gap: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-form {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .details-form .full {
+    grid-column: auto;
+  }
+
+  .details-form textarea {
+    min-height: 64px;
+  }
+
+  .appointment-summary {
+    min-height: 0;
+    padding: 16px 15px;
+  }
+}

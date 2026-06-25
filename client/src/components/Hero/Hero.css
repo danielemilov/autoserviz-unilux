@@ -348,7 +348,7 @@
    */
   right: calc(50% - 50vw);
 
-  top: 59%;
+  top: 61.5%;
 
   width:
     clamp(
@@ -595,13 +595,13 @@
   position: relative;
   z-index: 2;
 
-  width: 72px;
-  height: 72px;
+  width: 78px;
+  height: 78px;
 
   display: grid;
   place-items: center;
 
-  flex: 0 0 72px;
+  flex: 0 0 78px;
 
   padding: 4px;
 
@@ -663,7 +663,7 @@
     Helvetica,
     sans-serif;
 
-  font-size: 1.34rem;
+  font-size: 1.46rem;
   font-weight: 800;
 
   line-height: 1;
@@ -672,12 +672,12 @@
 }
 
 .hero-plate-copy small {
-  max-width: 225px;
+  max-width: 245px;
 
   color:
     rgba(255, 255, 255, 0.97);
 
-  font-size: 0.54rem;
+  font-size: 0.58rem;
   font-weight: 800;
 
   line-height: 1.45;
@@ -768,10 +768,10 @@
   }
 
   .hero-plate-logo {
-    width: 63px;
-    height: 63px;
+    width: 67px;
+    height: 67px;
 
-    flex-basis: 63px;
+    flex-basis: 67px;
   }
 }
 
@@ -1041,10 +1041,10 @@
   }
 
   .hero-plate-logo {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
 
-    flex-basis: 52px;
+    flex-basis: 56px;
 
     padding: 3px;
 
@@ -1062,15 +1062,15 @@
   }
 
   .hero-plate-copy strong {
-    font-size: 0.94rem;
+    font-size: 1.02rem;
 
     letter-spacing: 0.15em;
   }
 
   .hero-plate-copy small {
-    max-width: 175px;
+    max-width: 188px;
 
-    font-size: 0.4rem;
+    font-size: 0.43rem;
 
     line-height: 1.42;
 
@@ -1150,20 +1150,20 @@
   }
 
   .hero-plate-logo {
-    width: 48px;
-    height: 48px;
+    width: 51px;
+    height: 51px;
 
-    flex-basis: 48px;
+    flex-basis: 51px;
   }
 
   .hero-plate-copy strong {
-    font-size: 0.87rem;
+    font-size: 0.93rem;
   }
 
   .hero-plate-copy small {
-    max-width: 145px;
+    max-width: 156px;
 
-    font-size: 0.37rem;
+    font-size: 0.39rem;
   }
 }
 
